@@ -29,7 +29,13 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="(chatscreen)/index" options={{
+          headerTitle: 'Chat Screen',
+        }} />
+
+        <Stack.Screen name="(videoscreen)/index" options={{
+          headerTitle: 'Video Calling',
+        }} />
         <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>
